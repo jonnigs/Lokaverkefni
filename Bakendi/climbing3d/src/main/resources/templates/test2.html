@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test2</title>
+</head>
+<body>
+<div th:switch="${routes}">
+    <h2 th:case="null">No movies yet!</h2>
+    <div th:case="*">
+        <h2>Routes</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nafn</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="route : ${routes}">
+                <td th:text="${route.nafn}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/">Add a new movie</a></p>
+</div>
+</body>
+</html>

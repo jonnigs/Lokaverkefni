@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
+    <label for="userName">User Name</label>
+    <input type="text" th:field="*{userName}" id="userName" placeholder="User Name">
+    <label for="password">Password</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="Password">
+    <label for="rank">Rank</label>
+    <input type="text" th:field="*{rank}" id="rank" placeholder="Rank">
+</form>
+
+</body>
+</html>
