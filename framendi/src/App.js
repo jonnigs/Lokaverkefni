@@ -21,7 +21,6 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/map" exact component={Map} />
           </Switch>
-          <p>Eitthvað</p>
           <Footer />
         </main>
       </Router>

@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "nafn": "Múlafjall - Hlaðhamrar",
+      "um": "Fyrsti sector í Múlafjalli, 12 leiðir",
+      "slod": "../../../BlenderFiles/FaeraUmTolvu/A-Hladhamrar/hladhamrarLowRes.obj"
+    },
+    {
+      "id": 2,
+      "nafn": "Múlafjall - Kötlugróf",
+      "um": "Annar sector í Múlafjalli",
+      "slod": "../../../BlenderFiles/FaeraUmTolvu/B-Kotlugrof/OBJ/kotlugrof50Precent.obj"
+    },
+    {
+      "id": 3,
+      "nafn": "Múlafjall - Testofan",
+      "um": "Þriðji sector í Múlafjalli, vinsælasti sectorinn",
+      "slod": "../../../BlenderFiles/FaeraUmTolvu/C-Testofan/testofan.obj"
+    },
+    {
+      "id": 4,
+      "nafn": "Múlafjall - Leikfangaland",
+      "um": "Fjórði sector í Múlafjalli. Hér eru lengstu leiðirnar í fjallinu, Rísandi og Stígandi",
+      "slod": "../../../BlenderFiles/FaeraUmTolvu/D-Leikfangaland/OBJ/Leikfangaland/LeikfangalandCutOff.obj"
+    },
+    {
+      "id": 5,
+      "nafn": "Múlafjall - Kaffistofan og Votaberg",
+      "um": "Síðasti sector í Múlafjalli. Hér hefur lítið verið klifrað fram til l2019",
+      "slod": "../../../BlenderFiles/FaeraUmTolvu/D-Leikfangaland/OBJ/Kaffistofan/kaffistofanCutOff.obj"
+    }
+  ]
+}

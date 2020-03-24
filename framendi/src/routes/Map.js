@@ -1,12 +1,15 @@
-import React, { Component } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React, { useState, useEffect, Component } from "react";
+import Sudodata from "../sudodata.json";
+
+console.log(Sudodata.results);
 
 class Map extends Component {
   render() {
     return (
       <main className="main">
-        <p>Map</p>
+        <canvas id="gl-canvas" width="512" height="512">
+          Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
       </main>
     );
   }
