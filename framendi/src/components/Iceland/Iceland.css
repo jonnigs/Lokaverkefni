@@ -1,7 +1,8 @@
 svg {
+  display: block;
   width: 50%;
   height: auto;
-  margin: 2em;
+  margin: 4em auto;
 }
 
 #vesturland,
