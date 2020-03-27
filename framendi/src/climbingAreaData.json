@@ -1,9 +1,44 @@
 {
   "results": [
     {
-      "id": 1,
+      "id": "vestfirdir",
       "nafn": "Vestfirðir",
       "svaedi": ["a", "b", "c"]
+    },
+    {
+      "id": "vesturland",
+      "nafn": "Vesturland",
+      "svaedi": ["i", "b", "c"]
+    },
+    {
+      "id": "hofudborgarsvaedid",
+      "nafn": "Höfuðborgarsvæðið",
+      "svaedi": ["u", "b", "c"]
+    },
+    {
+      "id": "sudurland",
+      "nafn": "Suðurland",
+      "svaedi": ["y", "b", "c"]
+    },
+    {
+      "id": "austurland",
+      "nafn": "Austurland",
+      "svaedi": ["y", "b", "c"]
+    },
+    {
+      "id": "nordurland",
+      "nafn": "Norðurland",
+      "svaedi": ["t", "b", "c"]
+    },
+    {
+      "id": "midhalendi",
+      "nafn": "Miðhálendi",
+      "svaedi": ["r", "b", "c"]
+    },
+    {
+      "id": "vatnajokull",
+      "nafn": "Vatnajökull",
+      "svaedi": ["e", "b", "c"]
     }
   ]
 }
