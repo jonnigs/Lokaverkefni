@@ -1,47 +1,54 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
+//import Helmet from "react-helmet";
 import Iceland from "../components/Iceland";
-import Sudodata from "../sudodata.json";
 import ClimbingAreaData from "../climbingAreaData.json";
-
-console.log(Sudodata.results);
 
 class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: null,
       loading: true,
-      id: this.props.match.params.id
+      error: null,
+      id: this.props.match.params.id,
+      part: "",
+      areas: ""
     };
+
+    this.changeCountryPart = this.changeCountryPart.bind(this);
   }
 
   async componentDidMount() {
-    try {
-      this.setState({ id: this.props.match.params.id, loading: false });
-    } catch (error) {
-      console.error("Error fetching books", error);
-      this.setState({ error: true, loading: false });
-    }
+    window.addEventListener("click", () => {
+      this.changeCountryPart(this.props.match.params.id);
+      this.setData(this.props.match.params.id);
+    });
+  }
+
+  changeCountryPart(part) {
+    this.setState({ id: part });
+  }
+
+  setData() {
+    ClimbingAreaData.results.map(hluti => {
+      if (hluti.id == this.state.id) {
+        this.setState({ part: hluti.nafn, areas: hluti.svaedi });
+      }
+    });
   }
 
   render() {
-    const { loading, error, id } = this.state;
-
-    const landshluti = ClimbingAreaData.results.map(t => {
-      if (id == t.id) {
-        return <h1>{t.nafn}</h1>;
-      }
-    });
-
-    const svaedi = ClimbingAreaData.results[0].svaedi.map(svaedi => (
-      <p>{svaedi}</p>
-    ));
-
+    const { loading, error, id, part, areas } = this.state;
+    const numbers = [1, 2, 3, 4, 5];
+    const listItems = numbers.map(number => <li>{number}</li>);
+    //const climbingAreas = areas.map(a => <p>{a}</p>);
     return (
       <main className="main">
-        <Iceland />
-        {landshluti}
-        {svaedi}
+        <div>
+          <Iceland />
+        </div>
+        <h1>{part}</h1>
+        <p>{id}</p>
+        {listItems}
       </main>
     );
   }
