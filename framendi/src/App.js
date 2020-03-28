@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Home from "./routes/Home";
-import About from "./routes/About";
-import Map from "./routes/Map";
+import Home from "./routes/home";
+import About from "./routes/about";
+import Map from "./routes/map";
+import Area from "./routes/area";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/map" exact component={Map} />
             <Route path="/map/:id" component={Map} />
+            <Route path="/climbingarea/:id" component={Area} />
           </Switch>
           <Footer />
         </main>

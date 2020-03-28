@@ -3,42 +3,105 @@
     {
       "id": "vestfirdir",
       "nafn": "Vestfirðir",
-      "svaedi": ["a", "b", "c"]
+      "svaedi": [
+        "Arnarfjörður",
+        "Barðaströnd",
+        "Dýrafjörður",
+        "Hornstrandir",
+        "Ísafjarðardjúp"
+      ]
     },
     {
       "id": "vesturland",
       "nafn": "Vesturland",
-      "svaedi": ["i", "b", "c"]
+      "svaedi": [
+        "Bolaklettur",
+        "Brattabrekka",
+        "Haukadalur",
+        "Kaldidalur",
+        "Skarðsheiði",
+        "Skarðsströnd",
+        "Snæfellsnes",
+        "Teitsgil",
+        "Villingadalur"
+      ]
     },
     {
       "id": "hofudborgarsvaedid",
       "nafn": "Höfuðborgarsvæðið",
-      "svaedi": ["u", "b", "c"]
+      "svaedi": [
+        "Árnessýsla",
+        "Brynjudalur",
+        "Esja",
+        "Glymsgil",
+        "Hvalfjörður",
+        "Kjós",
+        "Mosfellsdalur",
+        "Múlafjall",
+        "Reykjavík",
+        "Vífilsfell",
+        "Þingvellir"
+      ]
     },
     {
       "id": "sudurland",
       "nafn": "Suðurland",
-      "svaedi": ["y", "b", "c"]
+      "svaedi": [
+        "Eyjafjöll",
+        "Fljótshlíð",
+        "Kirkjubæjarklaustur",
+        "Sólheimajökull",
+        "Tindfjöll",
+        "Vík í Mýrdal",
+        "Þórsmörk",
+        "Öræfi, Austur og Suðursveit",
+        "Öræfi, Vestursveit"
+      ]
     },
     {
       "id": "austurland",
       "nafn": "Austurland",
-      "svaedi": ["y", "b", "c"]
+      "svaedi": [
+        "Berufjörður",
+        "Breiðdalur",
+        "Fjarðabyggð",
+        "Fljótdalshérað",
+        "Vestrahorn"
+      ]
     },
     {
       "id": "nordurland",
       "nafn": "Norðurland",
-      "svaedi": ["t", "b", "c"]
+      "svaedi": [
+        "Akureyri",
+        "Hörgárdalur",
+        "Kaldakinn",
+        "Ólafsfjarðarmúli",
+        "Svarfaðardalur"
+      ]
     },
     {
       "id": "midhalendi",
       "nafn": "Miðhálendi",
-      "svaedi": ["r", "b", "c"]
+      "svaedi": ["Háifoss", "Hvítárgljúfur", "Kerlingarfjöll"]
     },
     {
       "id": "vatnajokull",
       "nafn": "Vatnajökull",
-      "svaedi": ["e", "b", "c"]
+      "svaedi": [
+        "Esjufjöll",
+        "Dyrhamar",
+        "Heljargnípa",
+        "Hrútfjallstindar",
+        "Hvannadalshnúkur",
+        "Karl og Kerling",
+        "Mávabyggðir",
+        "Miðfellstindur",
+        "Skarðatindar",
+        "Svínakambur",
+        "Tindaborg",
+        "Þumall"
+      ]
     }
   ]
 }
