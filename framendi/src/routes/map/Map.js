@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 //import Helmet from "react-helmet";
 import Iceland from "../../components/Iceland";
+import { get, readPost } from "../../api";
 import ClimbingAreaData from "../../climbingAreaData.json";
 
 class Map extends Component {
@@ -21,6 +23,21 @@ class Map extends Component {
     window.addEventListener("click", () => {
       this.changeCountryPart(this.props.match.params.id);
     });
+    try {
+      const data = await get("/climbingAreaData.json");
+      if (data.error) {
+        window.location("/error");
+      }
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching books", error);
+      this.setState({ error: true, loading: false });
+    }
+    const response = await fetch(
+      "https://notendur.hi.is/~jgs7/Lokaverkefni/service/climbingAreaData.json"
+    );
+    const data = await response.json();
+    console.log(data);
   }
 
   changeCountryPart(part) {
@@ -38,7 +55,11 @@ class Map extends Component {
 
     let climbingAreasHTML;
     if (climbingAreas) {
-      climbingAreasHTML = climbingAreas.map(t => <p>{t}</p>);
+      climbingAreasHTML = climbingAreas.map(t => (
+        <p>
+          <Link to="/about">{t.nafn}</Link>
+        </p>
+      ));
     }
     return (
       <main className="main">

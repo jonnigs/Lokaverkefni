@@ -15,7 +15,7 @@ class Iceland extends Component {
           width="2948.066px"
           height="2064.207px"
           viewBox="0 0 2948.066 2064.207"
-          enable-background="new 0 0 2948.066 2064.207"
+          enableBackground="new 0 0 2948.066 2064.207"
         >
           <Link to="/map/vestfirdir">
             <path
