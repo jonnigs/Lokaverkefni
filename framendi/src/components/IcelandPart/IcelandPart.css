@@ -1,0 +1,32 @@
+svg {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 4em auto;
+}
+
+#vesturland,
+#vestfirdir,
+#nordurland,
+#hofudborgarsvaedid,
+#sudurland,
+#austurland,
+#midhalendi {
+  fill: rgb(165, 223, 111);
+}
+
+#vatnajokull {
+  fill: rgb(167, 168, 168);
+}
+
+#vesturland:hover,
+#vestfirdir:hover,
+#nordurland:hover,
+#hofudborgarsvaedid:hover,
+#sudurland:hover,
+#austurland:hover,
+#midhalendi:hover,
+#vatnajokull:hover {
+  fill: rgb(88, 155, 25);
+  transition: fill 0.3s ease-in;
+}

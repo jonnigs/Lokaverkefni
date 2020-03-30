@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./routes/home";
 import About from "./routes/about";
 import Map from "./routes/map";
+import MapPart from "./routes/mapPart";
 import Area from "./routes/area";
 
 import "./App.css";
@@ -21,7 +22,7 @@ class App extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />
             <Route path="/map" exact component={Map} />
-            <Route path="/map/:id" component={Map} />
+            <Route path="/map/:id" component={MapPart} />
             <Route path="/climbingarea/:id" component={Area} />
           </Switch>
           <Footer />
