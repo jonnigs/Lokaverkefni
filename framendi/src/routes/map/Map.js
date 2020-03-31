@@ -10,44 +10,67 @@ class Map extends Component {
     this.state = {
       loading: true,
       error: null,
-      id: this.props.match.params.id,
+      query: "",
       countryPart: "",
       climbingAreas: "",
       season: "summer"
     };
 
-    this.handleSeasonChange.bind(this);
+    this.getQueryValue = this.getQueryValue.bind(this);
+    this.setQueryValue = this.setQueryValue.bind(this);
+    this.handleSeasonChange = this.handleSeasonChange.bind(this);
   }
 
-  handleSeasonChange = () => {
-    if (this.state.season == "summer") {
-      this.setState({
-        season: "winter"
-      });
-    } else {
-      this.setState({
-        season: "summer"
-      });
+  async componentDidMount() {
+    const query = this.getQueryValue();
+    this.setQueryValue(query);
+    const querySplit = query.split("=");
+    this.setSeasonValue(querySplit[1]);
+  }
+
+  getQueryValue = () => {
+    const query = this.props.location.search;
+    return query;
+  };
+
+  setQueryValue = query => {
+    this.setState({ query });
+  };
+
+  setSeasonValue = season => {
+    if (season === "summer" || season === "winter") {
+      this.setState({ season });
     }
   };
 
-  callbackFunction = childData => {
-    this.setState({ season: childData });
+  handleSeasonChange = () => {
+    if (this.state.season === "summer") {
+      this.setState({ season: "winter" });
+    } else {
+      this.setState({ season: "summer" });
+    }
+    this.updateURLParameter();
+  };
+
+  updateURLParameter = () => {
+    if (this.state.season === "summer") {
+      window.history.pushState("page2", "Title", "/map?season=winter");
+    } else {
+      window.history.pushState("page2", "Title", "/map?season=summer");
+    }
   };
 
   render() {
-    const {
-      loading,
-      error,
-      id,
-      countryPart,
-      climbingAreas,
-      season
-    } = this.state;
+    const { season } = this.state;
 
     return (
       <main className="main">
-        <Switch />
+        <div>
+          <p>{season}</p>
+          <Switch changeSeason={this.handleSeasonChange} season={season} />
+          <p>{season}</p>
+        </div>
+
         <Iceland />
       </main>
     );

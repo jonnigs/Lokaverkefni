@@ -5,20 +5,38 @@ class Switch extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked: true
+      season: "summer"
     };
 
-    this.handleCheck.bind(this);
+    this.sendSeasonToParent = this.sendSeasonToParent.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
   }
 
-  handleCheck() {
+  handleCheck = () => {
     this.setState({
       checked: !this.state.checked
     });
-    console.log(this.state.checked);
-  }
+  };
+
+  sendSeasonToParent = () => {
+    if (this.state.season === "summer") {
+      this.props.changeSeason("winter");
+      this.setState({ season: "winter" });
+    } else {
+      this.props.changeSeason("summer");
+      this.setState({ season: "summer" });
+    }
+  };
+
+  startOnWinter = () => {
+    this.setState({ season: "winter" });
+  };
 
   render() {
+    if (this.props.season != this.state.season) {
+      this.startOnWinter();
+    }
+
     return (
       <div className="onoffswitch">
         <input
@@ -26,9 +44,11 @@ class Switch extends Component {
           name="onoffswitch"
           className="onoffswitch-checkbox"
           id="myonoffswitch"
-          onClick={() => this.handleCheck()}
+          onClick={() => {
+            this.sendSeasonToParent();
+          }}
         />
-        <label className="onoffswitch-label" for="myonoffswitch">
+        <label className="onoffswitch-label" htmlFor="myonoffswitch">
           <span className="onoffswitch-inner"></span>
           <span className="onoffswitch-switch"></span>
         </label>
