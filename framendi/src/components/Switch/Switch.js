@@ -12,6 +12,15 @@ class Switch extends Component {
     this.handleCheck = this.handleCheck.bind(this);
   }
 
+  componentDidMount() {
+    const url = window.location.href;
+    const query = url.split("=");
+    if (query[1] === "winter") {
+      this.setState({ season: query[1], checked: true });
+      document.getElementById("myonoffswitch").checked = true;
+    }
+  }
+
   handleCheck = () => {
     this.setState({
       checked: !this.state.checked
@@ -28,15 +37,8 @@ class Switch extends Component {
     }
   };
 
-  startOnWinter = () => {
-    this.setState({ season: "winter" });
-  };
-
   render() {
-    if (this.props.season != this.state.season) {
-      this.startOnWinter();
-    }
-
+    console.log(this.state.season);
     return (
       <div className="onoffswitch">
         <input
