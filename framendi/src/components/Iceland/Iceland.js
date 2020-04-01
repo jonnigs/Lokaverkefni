@@ -3,7 +3,44 @@ import { Link } from "react-router-dom";
 import "./Iceland.css";
 
 class Iceland extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: "",
+      season: "summer",
+      styleClass: "summerColor"
+    };
+  }
+
+  componentDidMount() {
+    const url = window.location.href;
+    const query = url.split("=");
+    if (query[1] === "winter") {
+      this.setState({ season: query[1], styleClass: "winterColor" });
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.season !== this.props.season) {
+      if (this.props.season === "summer") {
+        this.setState({
+          season: this.props.season,
+          styleClass: "summerColor"
+        });
+      } else {
+        this.setState({
+          season: this.props.season,
+          styleClass: "winterColor"
+        });
+      }
+      console.log(this.state.season);
+      console.log(this.state.styleClass);
+    }
+  }
+
   render() {
+    const { season, styleClass } = this.state;
+
     return (
       <div className="landid">
         <svg
@@ -17,8 +54,9 @@ class Iceland extends Component {
           viewBox="0 0 2948.066 2064.207"
           enableBackground="new 0 0 2948.066 2064.207"
         >
-          <Link to="/map/vestfirdir">
+          <Link to={"/map/vestfirdir?season=" + season}>
             <path
+              className={styleClass}
               id="vestfirdir"
               fill="#127834"
               d="M866.513,415.491c-0.301-9.081-3.445-19.168-10.863-19.695
@@ -199,8 +237,9 @@ class Iceland extends Component {
 	c-4.914-0.349-2.58-3.432,0.145-5.248c3.567-2.378,7.9-3.249,9.979-7.469C865.993,425.109,866.677,420.45,866.513,415.491z"
             />
           </Link>
-          <Link to="/map/vesturland">
+          <Link to={"/map/vesturland?season=" + season}>
             <path
+              className={styleClass}
               id="vesturland"
               fill="#25AD5F"
               d="M456.858,1108.058c-0.835-3.923-4.853-9.819-8.389-3.546
@@ -285,8 +324,9 @@ class Iceland extends Component {
 	C469.176,1127.684,458.713,1116.766,456.858,1108.058z"
             />
           </Link>
-          <Link to="/map/hofudborgarsvaedid">
+          <Link to={"/map/hofudborgarsvaedid?season=" + season}>
             <path
+              className={styleClass}
               id="hofudborgarsvaedid"
               fill="#85B547"
               d="M820.8,1396.271c-3.028,1.357-7.705,0.153-10.922,0.355
@@ -328,8 +368,9 @@ class Iceland extends Component {
 	c-21.326,6.636-42.652,13.27-63.979,19.904c-8.673,2.699-17.347,5.397-26.021,8.096"
             />
           </Link>
-          <Link to="/map/sudurland">
+          <Link to={"/map/sudurland?season=" + season}>
             <path
+              className={styleClass}
               id="sudurland"
               fill="#D9A329"
               d="M2065.693,1663.937c0.516,0.63,1.094,1.195,1.771,1.634
@@ -436,8 +477,9 @@ class Iceland extends Component {
 	C2064.213,1661.767,2064.872,1662.934,2065.693,1663.937z"
             />
           </Link>
-          <Link to="/map/austurland">
+          <Link to={"/map/austurland?season=" + season}>
             <path
+              className={styleClass}
               id="austurland"
               fill="#EA9018"
               d="M2498.379,1240.886c-0.313-3.131-1.451-6.297-2.432-9.214
@@ -535,8 +577,9 @@ class Iceland extends Component {
 	c2.842,0.349,6.242,1.624,9.089,0.827c2.81-0.787,2.237-3.555,3.561-5.53C2498.288,1246.373,2498.654,1243.643,2498.379,1240.886z"
             />
           </Link>
-          <Link to="/map/nordurland">
+          <Link to={"/map/nordurland?season=" + season}>
             <path
+              className={styleClass}
               id="nordurland"
               fill="#CCCA57"
               d="M1894.183,306.3c-0.071,0.042-0.142,0.083-0.213,0.125c-4.036,2.318-7.341,2.61-9.464,7.018
@@ -637,8 +680,9 @@ class Iceland extends Component {
 	c-4.578,2.582-14.235,14.684-14.173,20.163c0.048,4.21,4.212,8.55,5.224,12.649C1907.533,289.592,1902.229,301.524,1894.183,306.3z"
             />
           </Link>
-          <Link to="/map/midhalendi">
+          <Link to={"}/map/midhalendi?season=" + season}>
             <path
+              className={styleClass}
               id="midhalendi"
               fill="#BBAD3D"
               d="M1369.334,1800.554c0.736,0.231,1.473,1.92,1.915,2.588
@@ -724,8 +768,9 @@ class Iceland extends Component {
 	l198.935,190.367"
             />
           </Link>
-          <Link to="/map/vatnajokull">
+          <Link to={"/map/vatnajokull?season=" + season}>
             <path
+              className={season}
               id="vatnajokull"
               fill="#69BD45"
               d="M2039.906,1120.379c1.783-1.348,2.703-2.93,4.319-4.069

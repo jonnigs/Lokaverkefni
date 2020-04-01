@@ -38,7 +38,6 @@ class Switch extends Component {
   };
 
   render() {
-    console.log(this.state.season);
     return (
       <div className="onoffswitch">
         <input

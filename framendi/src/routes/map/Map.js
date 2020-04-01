@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 //import Helmet from "react-helmet";
 import Iceland from "../../components/Iceland";
 import Switch from "../../components/Switch";
@@ -8,11 +8,7 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
-      error: null,
       query: "",
-      countryPart: "",
-      climbingAreas: "",
       season: "summer"
     };
 
@@ -66,12 +62,9 @@ class Map extends Component {
     return (
       <main className="main">
         <div>
-          <p>{season}</p>
           <Switch changeSeason={this.handleSeasonChange} season={season} />
-          <p>{season}</p>
         </div>
-
-        <Iceland />
+        <Iceland season={season} />
       </main>
     );
   }
