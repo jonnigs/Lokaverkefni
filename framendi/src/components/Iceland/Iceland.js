@@ -33,8 +33,6 @@ class Iceland extends Component {
           styleClass: "winterColor"
         });
       }
-      console.log(this.state.season);
-      console.log(this.state.styleClass);
     }
   }
 
