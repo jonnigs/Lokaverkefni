@@ -13,7 +13,6 @@ class MapPart extends Component {
       id: this.props.match.params.id,
       query: "",
       season: "summer",
-      countryPart: "",
       climbingAreas: ""
     };
 
@@ -54,10 +53,13 @@ class MapPart extends Component {
   };
 
   updateURLParameter = () => {
+    const URLBase = "/map/" + this.state.id;
     if (this.state.season === "summer") {
-      window.history.pushState("page2", "Title", "/map?season=winter");
+      const URL = URLBase + "?season=winter";
+      window.history.pushState("page2", "Title", URL);
     } else {
-      window.history.pushState("page2", "Title", "/map?season=summer");
+      const URL = URLBase + "?season=summer";
+      window.history.pushState("page2", "Title", URL);
     }
   };
 

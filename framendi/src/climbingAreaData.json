@@ -3,116 +3,232 @@
     {
       "id": "vestfirdir",
       "nafn": "Vestfirðir",
-      "svaedi": [
-        { "id": "arnarfjordur", "nafn": "Arnarfjörður", "model": [] },
-        { "id": "bardastrond", "nafn": "Barðaströnd", "model": [] },
-        { "id": "dyrafjordur", "nafn": "Dýrafjörður", "model": [] },
-        { "id": "hornstrandir", "nafn": "Hornstrandir", "model": [] },
-        { "id": "isafjardardjup", "nafn": "Ísafjarðardjúp", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vestfirdir-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vestfirdir-vetur.svg",
+          "svaedi": [
+            { "id": "arnarfjordur", "nafn": "Arnarfjörður", "model": [] },
+            { "id": "bardastrond", "nafn": "Barðaströnd", "model": [] },
+            { "id": "dyrafjordur", "nafn": "Dýrafjörður", "model": [] },
+            { "id": "hornstrandir", "nafn": "Hornstrandir", "model": [] },
+            { "id": "isafjardardjup", "nafn": "Ísafjarðardjúp", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "vesturland",
       "nafn": "Vesturland",
-      "svaedi": [
-        { "id": "bolaklettur", "nafn": "Bolaklettur", "model": [] },
-        { "id": "brattabrekka", "nafn": "Brattabrekka", "model": [] },
-        { "id": "haukadalur", "nafn": "Haukadalur", "model": [] },
-        { "id": "kaldidalur", "nafn": "Kaldidalur", "model": [] },
-        { "id": "skardsheidi", "nafn": "Skarðsheiði", "model": [] },
-        { "id": "skardsstrond", "nafn": "Skarðsströnd", "model": [] },
-        { "id": "snaefellsnes", "nafn": "Snæfellsnes", "model": [] },
-        { "id": "teitsgil", "nafn": "Teitsgil", "model": [] },
-        { "id": "villingadalur", "nafn": "Villingadalur", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vesturland-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vesturland-vetur.svg",
+          "svaedi": [
+            { "id": "bolaklettur", "nafn": "Bolaklettur", "model": [] },
+            { "id": "brattabrekka", "nafn": "Brattabrekka", "model": [] },
+            { "id": "haukadalur", "nafn": "Haukadalur", "model": [] },
+            { "id": "kaldidalur", "nafn": "Kaldidalur", "model": [] },
+            { "id": "skardsheidi", "nafn": "Skarðsheiði", "model": [] },
+            { "id": "skardsstrond", "nafn": "Skarðsströnd", "model": [] },
+            { "id": "snaefellsnes", "nafn": "Snæfellsnes", "model": [] },
+            { "id": "teitsgil", "nafn": "Teitsgil", "model": [] },
+            { "id": "villingadalur", "nafn": "Villingadalur", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "hofudborgarsvaedid",
       "nafn": "Höfuðborgarsvæðið",
-      "svaedi": [
-        { "id": "arnessysla", "nafn": "Árnessýsla", "model": [] },
-        { "id": "brynjudalur", "nafn": "Brynjudalur", "model": [] },
-        { "id": "esja", "nafn": "Esja", "model": [] },
-        { "id": "glymsgil", "nafn": "Glymsgil", "model": [] },
-        { "id": "hvalfjordur", "nafn": "Hvalfjörður", "model": [] },
-        { "id": "kjos", "nafn": "Kjós", "model": [] },
-        { "id": "mosfellsdalur", "nafn": "Mosfellsdalur", "model": [] },
-        { "id": "mulafjall", "nafn": "Múlafjall", "model": [] },
-        { "id": "reykjavik", "nafn": "Reykjavík", "model": [] },
-        { "id": "vifilsfell", "nafn": "Vífilsfell", "model": [] },
-        { "id": "tingvellir", "nafn": "Þingvellir", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/hofudborgarsvaedid-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/hofudborgarsvaedid-sumar.svg",
+          "svaedi": [
+            { "id": "arnessysla", "nafn": "Árnessýsla", "model": [] },
+            { "id": "brynjudalur", "nafn": "Brynjudalur", "model": [] },
+            { "id": "esja", "nafn": "Esja", "model": [] },
+            { "id": "glymsgil", "nafn": "Glymsgil", "model": [] },
+            { "id": "hvalfjordur", "nafn": "Hvalfjörður", "model": [] },
+            { "id": "kjos", "nafn": "Kjós", "model": [] },
+            { "id": "mosfellsdalur", "nafn": "Mosfellsdalur", "model": [] },
+            { "id": "mulafjall", "nafn": "Múlafjall", "model": [] },
+            { "id": "reykjavik", "nafn": "Reykjavík", "model": [] },
+            { "id": "vifilsfell", "nafn": "Vífilsfell", "model": [] },
+            { "id": "tingvellir", "nafn": "Þingvellir", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "sudurland",
       "nafn": "Suðurland",
-      "svaedi": [
-        { "id": "eyjafjoll", "nafn": "Eyjafjöll", "model": [] },
-        { "id": "fljotshlid", "nafn": "Fljótshlíð", "model": [] },
+      "sumar": [
         {
-          "id": "kirkjubaejarklaustur",
-          "nafn": "Kirkjubæjarklaustur",
-          "model": []
-        },
-        { "id": "solheimajokull", "nafn": "Sólheimajökull", "model": [] },
-        { "id": "tindfjoll", "nafn": "Tindfjöll", "model": [] },
-        { "id": "vik", "nafn": "Vík í Mýrdal", "model": [] },
-        { "id": "thorsmork", "nafn": "Þórmörk", "model": [] },
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/sudurland-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
         {
-          "id": "oraefi-austur",
-          "nafn": "Öræfi, Austur og Suðursveit",
-          "model": []
-        },
-        { "id": "oraefi-vestur", "nafn": "Öræfi, Vestursveit", "model": [] }
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/sudurland-vetur.svg",
+          "svaedi": [
+            { "id": "eyjafjoll", "nafn": "Eyjafjöll", "model": [] },
+            { "id": "fljotshlid", "nafn": "Fljótshlíð", "model": [] },
+            {
+              "id": "kirkjubaejarklaustur",
+              "nafn": "Kirkjubæjarklaustur",
+              "model": []
+            },
+            { "id": "solheimajokull", "nafn": "Sólheimajökull", "model": [] },
+            { "id": "tindfjoll", "nafn": "Tindfjöll", "model": [] },
+            { "id": "vik", "nafn": "Vík í Mýrdal", "model": [] },
+            { "id": "thorsmork", "nafn": "Þórmörk", "model": [] },
+            {
+              "id": "oraefi-austur",
+              "nafn": "Öræfi, Austur og Suðursveit",
+              "model": []
+            },
+            { "id": "oraefi-vestur", "nafn": "Öræfi, Vestursveit", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "austurland",
       "nafn": "Austurland",
-      "svaedi": [
-        { "id": "berufjordur", "nafn": "Berufjörður", "model": [] },
-        { "id": "breiddalur", "nafn": "Breiðdalur", "model": [] },
-        { "id": "fjardabyggd", "nafn": "Fjarðabyggð", "model": [] },
-        { "id": "fljotdalsherad", "nafn": "Fljórdalshérað", "model": [] },
-        { "id": "vestrahorn", "nafn": "Vestrahorn", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/austurland-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/austurland-sumar.svg",
+          "svaedi": [
+            { "id": "berufjordur", "nafn": "Berufjörður", "model": [] },
+            { "id": "breiddalur", "nafn": "Breiðdalur", "model": [] },
+            { "id": "fjardabyggd", "nafn": "Fjarðabyggð", "model": [] },
+            { "id": "fljotdalsherad", "nafn": "Fljórdalshérað", "model": [] },
+            { "id": "vestrahorn", "nafn": "Vestrahorn", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "nordurland",
       "nafn": "Norðurland",
-      "svaedi": [
-        { "id": "akureyri", "nafn": "Akureyri", "model": [] },
-        { "id": "horgardalur", "nafn": "Hörgárdalur", "model": [] },
-        { "id": "kaldakinn", "nafn": "Kaldakinn", "model": [] },
-        { "id": "olafsfjardarmuli", "nafn": "Ólafsfjarðarmúli", "model": [] },
-        { "id": "svarfaðardalur", "nafn": "Svarfaðardalur", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/nordurland-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/nordurland-vetur.svg",
+          "svaedi": [
+            { "id": "akureyri", "nafn": "Akureyri", "model": [] },
+            { "id": "horgardalur", "nafn": "Hörgárdalur", "model": [] },
+            { "id": "kaldakinn", "nafn": "Kaldakinn", "model": [] },
+            {
+              "id": "olafsfjardarmuli",
+              "nafn": "Ólafsfjarðarmúli",
+              "model": []
+            },
+            { "id": "svarfaðardalur", "nafn": "Svarfaðardalur", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "midhalendi",
       "nafn": "Miðhálendi",
-      "svaedi": [
-        { "id": "haifoss", "nafn": "Háifoss", "model": [] },
-        { "id": "hvitargljufur", "nafn": "Hvítárgljúfur", "model": [] },
-        { "id": "kerlingarfjoll", "nafn": "Kerlingarfjöll", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/midhalendi-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/midhalendi-vetur.svg",
+          "svaedi": [
+            { "id": "haifoss", "nafn": "Háifoss", "model": [] },
+            { "id": "hvitargljufur", "nafn": "Hvítárgljúfur", "model": [] },
+            { "id": "kerlingarfjoll", "nafn": "Kerlingarfjöll", "model": [] }
+          ]
+        }
       ]
     },
     {
       "id": "vatnajokull",
       "nafn": "Vatnajökull",
-      "svaedi": [
-        { "id": "esjufjoll", "nafn": "Esjufjöll", "model": [] },
-        { "id": "dyrhamar", "nafn": "Dyrhamar", "model": [] },
-        { "id": "heljargnipa", "nafn": "Heljargnípa", "model": [] },
-        { "id": "hrutfjallstindar", "nafn": "Hrútfjallstindar", "model": [] },
-        { "id": "hvannadalshnúkur", "nafn": "Hvannadalshnúkur", "model": [] },
-        { "id": "karl-og-kerling", "nafn": "Karl og Kerling", "model": [] },
-        { "id": "mavabyggðir", "nafn": "Mávabyggðir", "model": [] },
-        { "id": "midfellstindur", "nafn": "Miðfellstindur", "model": [] },
-        { "id": "skardatindar", "nafn": "Skarðatindar", "model": [] },
-        { "id": "svinakambur", "nafn": "Svínakambur", "model": [] },
-        { "id": "tindaborg", "nafn": "Tindaborg", "model": [] },
-        { "id": "thumall", "nafn": "Þumall", "model": [] }
+      "sumar": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vatnajokull-sumar.svg",
+          "svaedi": [
+            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+          ]
+        }
+      ],
+      "vetur": [
+        {
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vatnajokull-vetur.svg",
+          "svaedi": [
+            { "id": "esjufjoll", "nafn": "Esjufjöll", "model": [] },
+            { "id": "dyrhamar", "nafn": "Dyrhamar", "model": [] },
+            { "id": "heljargnipa", "nafn": "Heljargnípa", "model": [] },
+            {
+              "id": "hrutfjallstindar",
+              "nafn": "Hrútfjallstindar",
+              "model": []
+            },
+            {
+              "id": "hvannadalshnúkur",
+              "nafn": "Hvannadalshnúkur",
+              "model": []
+            },
+            { "id": "karl-og-kerling", "nafn": "Karl og Kerling", "model": [] },
+            { "id": "mavabyggðir", "nafn": "Mávabyggðir", "model": [] },
+            { "id": "midfellstindur", "nafn": "Miðfellstindur", "model": [] },
+            { "id": "skardatindar", "nafn": "Skarðatindar", "model": [] },
+            { "id": "svinakambur", "nafn": "Svínakambur", "model": [] },
+            { "id": "tindaborg", "nafn": "Tindaborg", "model": [] },
+            { "id": "thumall", "nafn": "Þumall", "model": [] }
+          ]
+        }
       ]
     }
   ]

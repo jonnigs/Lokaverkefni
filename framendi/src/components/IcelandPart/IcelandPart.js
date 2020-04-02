@@ -1,41 +1,8 @@
 import React, { Component } from "react";
-//mport { Link } from "react-router-dom";
-import "./IcelandPart.css";
-import vestfirdirsummer from "../../images/maps/vestfirdir-sumar.svg";
-import vestfirdirwinter from "../../images/maps/vestfirdir-vetur.svg";
-import vesturlandsummer from "../../images/maps/vesturland-sumar.svg";
-import vesturlandwinter from "../../images/maps/vesturland-vetur.svg";
-import hofudborgarsvaedidsummer from "../../images/maps/hofudborgarsvaedid-sumar.svg";
-import hofudborgarsvaedidwinter from "../../images/maps/hofudborgarsvaedid-vetur.svg";
-import sudurlandsummer from "../../images/maps/sudurland-sumar.svg";
-import sudurlandwinter from "../../images/maps/sudurland-vetur.svg";
-import austurlandsummer from "../../images/maps/austurland-sumar.svg";
-import austurlandwinter from "../../images/maps/austurland-vetur.svg";
-import nordurlandsummer from "../../images/maps/nordurland-sumar.svg";
-import nordurlandwinter from "../../images/maps/nordurland-vetur.svg";
-import midhalendisummer from "../../images/maps/midhalendi-sumar.svg";
-import midhalendiwinter from "../../images/maps/midhalendi-vetur.svg";
-import vatnajokullsummer from "../../images/maps/vatnajokull-sumar.svg";
-import vatnajokullwinter from "../../images/maps/vatnajokull-vetur.svg";
+//import { Link } from "react-router-dom";
+import API from "../../fake-api.js";
 
-const partOptions = [
-  vestfirdirsummer,
-  vestfirdirwinter,
-  vesturlandsummer,
-  vesturlandwinter,
-  hofudborgarsvaedidsummer,
-  hofudborgarsvaedidwinter,
-  sudurlandsummer,
-  sudurlandwinter,
-  austurlandsummer,
-  austurlandwinter,
-  nordurlandsummer,
-  nordurlandwinter,
-  midhalendisummer,
-  midhalendiwinter,
-  vatnajokullsummer,
-  vatnajokullwinter
-];
+import "./IcelandPart.css";
 
 class IcelandPart extends Component {
   constructor(props) {
@@ -43,16 +10,19 @@ class IcelandPart extends Component {
     this.state = {
       //id: this.props.match.params.id,
       season: "summer",
-      countryPart: ""
+      countryPart: "",
+      svg: ""
     };
+    this.getSVG = this.getSVG.bind(this);
   }
 
   componentDidMount() {
     const url = window.location.href;
     const query = url.split("=");
     if (query[1] === "winter") {
-      this.setState({ season: query[1] });
+      this.setState({ season: query[1], countryPart: this.props.whichPart });
     }
+    this.getSVG();
   }
 
   componentDidUpdate(prevProps) {
@@ -69,18 +39,25 @@ class IcelandPart extends Component {
     }
   }
 
+  getSVG = () => {
+    const svgSlod = API.get(this.props.whichPart, this.props.season);
+    this.setState({
+      svg: svgSlod
+    });
+  };
+
   render() {
-    const { season } = this.state;
+    const { season, svg } = this.state;
 
     return (
       <div className="icelandpart">
         <p>{this.props.whichPart}</p>
         <img
           className="mapPart"
-          src={vestfirdirsummer}
+          //src={API.get(this.props.whichPart)}
           alt="Mynd af landshluta"
+          src={svg}
         />
-        {console.log(this.props.whichPart, season)}
       </div>
     );
   }

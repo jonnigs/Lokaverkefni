@@ -678,7 +678,7 @@ class Iceland extends Component {
 	c-4.578,2.582-14.235,14.684-14.173,20.163c0.048,4.21,4.212,8.55,5.224,12.649C1907.533,289.592,1902.229,301.524,1894.183,306.3z"
             />
           </Link>
-          <Link to={"}/map/midhalendi?season=" + season}>
+          <Link to={"/map/midhalendi?season=" + season}>
             <path
               className={styleClass}
               id="midhalendi"
