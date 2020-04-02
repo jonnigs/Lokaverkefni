@@ -28,10 +28,12 @@ class IcelandPart extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.season !== this.props.season) {
       if (this.props.season === "summer") {
+        this.getSVG();
         this.setState({
           season: this.props.season
         });
       } else {
+        this.getSVG();
         this.setState({
           season: this.props.season
         });
