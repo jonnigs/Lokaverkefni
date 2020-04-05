@@ -21,6 +21,7 @@ function getTemp(endpoint) {
       obj = landshluti;
     }
   });
+
   return obj;
 }
 

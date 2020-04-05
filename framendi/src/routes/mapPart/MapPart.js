@@ -33,7 +33,11 @@ class MapPart extends Component {
 
   getClimbingAreas = id => {
     const data = API.getTemp(id);
-    this.setState({ mapPartData: data });
+    this.setState({
+      mapPartData: data,
+      summerAreas: data.sumar[0].svaedi,
+      winterAreas: data.vetur[0].svaedi
+    });
   };
 
   getQueryValue = () => {
@@ -72,16 +76,29 @@ class MapPart extends Component {
   };
 
   render() {
-    const { season, id } = this.state;
+    const { season, id, mapPartData } = this.state;
+
+    let climbingAreas;
+    if (mapPartData) {
+      if (season === "summer") {
+        climbingAreas = mapPartData.sumar[0].svaedi.map(svaedi => {
+          return <p>{svaedi.nafn}</p>;
+        });
+      } else {
+        climbingAreas = mapPartData.vetur[0].svaedi.map(svaedi => {
+          return <p>{svaedi.nafn}</p>;
+        });
+      }
+    }
 
     return (
       <main className="main">
         <Switch changeSeason={this.handleSeasonChange} season={season} />
-        {console.log(this.state.mapPartData)}
         <div>
           <IcelandPart whichPart={id} season={season} />
         </div>
         <h1>{id}</h1>
+        {climbingAreas}
       </main>
     );
   }
