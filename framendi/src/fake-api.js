@@ -14,4 +14,14 @@ function get(endpoint, season) {
   return slod;
 }
 
-export default { get };
+function getTemp(endpoint) {
+  let obj;
+  data.results.map(landshluti => {
+    if (endpoint === landshluti.id) {
+      obj = landshluti;
+    }
+  });
+  return obj;
+}
+
+export default { get, getTemp };

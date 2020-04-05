@@ -7,7 +7,16 @@
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vestfirdir-sumar.svg",
           "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+            { "id": "bardastrond", "nafn": "Barðastönd", "model": [] },
+            {
+              "id": "gygjasprotshamar",
+              "nafn": "Gýgjasprotshamar",
+              "model": []
+            },
+            { "id": "holmavik", "nafn": "Hólmavík", "model": [] },
+            { "id": "isafjardardjup", "nafn": "Ísafjarðardjúp", "model": [] },
+            { "id": "nordurfjordur", "nafn": "Norðurfjörður", "model": [] },
+            { "id": "vadalfjoll", "nafn": "Vaðalfjöll", "model": [] }
           ]
         }
       ],
@@ -31,7 +40,10 @@
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/vesturland-sumar.svg",
           "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+            { "id": "akrafjall", "nafn": "Akrafjall", "model": [] },
+            { "id": "gerduberg", "nafn": "Gerðuberg", "model": [] },
+            { "id": "snaefellsnes", "nafn": "Snæfellsnes", "model": [] },
+            { "id": "svarfholsmuli", "nafn": "Svarfhólsmúli", "model": [] }
           ]
         }
       ],
@@ -59,13 +71,27 @@
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/hofudborgarsvaedid-sumar.svg",
           "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+            { "id": "asvellir", "nafn": "Ásvellir", "model": [] },
+            { "id": "buahamrar", "nafn": "Búahamrar", "model": [] },
+            { "id": "galgaklettar", "nafn": "Gálgaklettar", "model": [] },
+            { "id": "hafnarfjordur", "nafn": "Hafnarfjörður", "model": [] },
+            { "id": "haibjalli", "nafn": "Háibjalli", "model": [] },
+            { "id": "heidmork", "nafn": "Heiðmörk", "model": [] },
+            { "id": "hnefi", "nafn": "Hnefi", "model": [] },
+            { "id": "horzl-vid-hauga", "nafn": "Hörzl við Hauga", "model": [] },
+            { "id": "leirvogsgil", "nafn": "Leirvogsgil", "model": [] },
+            { "id": "reykjavik", "nafn": "Reykjavík", "model": [] },
+            { "id": "smyrlabudir", "nafn": "Smyrlabúðir", "model": [] },
+            { "id": "stardalur", "nafn": "Stardalur", "model": [] },
+            { "id": "valbjargargjá", "nafn": "Valbjargargjá", "model": [] },
+            { "id": "valshamar", "nafn": "Valshamar", "model": [] },
+            { "id": "thingvellir", "nafn": "Þingvellir", "model": [] }
           ]
         }
       ],
       "vetur": [
         {
-          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/hofudborgarsvaedid-sumar.svg",
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/hofudborgarsvaedid-vetur.svg",
           "svaedi": [
             { "id": "arnessysla", "nafn": "Árnessýsla", "model": [] },
             { "id": "brynjudalur", "nafn": "Brynjudalur", "model": [] },
@@ -89,7 +115,19 @@
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/sudurland-sumar.svg",
           "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+            {
+              "id": "austur-klofningur",
+              "nafn": "Austur klofningur",
+              "model": []
+            },
+            { "id": "eyjafjoll", "nafn": "Eyjafjöll", "model": [] },
+            { "id": "fallastakkanof", "nafn": "Fallastakkanöf", "model": [] },
+            { "id": "fjallsarlon", "nafn": "Fjallsárlón", "model": [] },
+            { "id": "hnappavellir", "nafn": "Hnappavellir", "model": [] },
+            { "id": "hreppholar", "nafn": "Hrepphólar", "model": [] },
+            { "id": "steinafjall", "nafn": "Steinafjall", "model": [] },
+            { "id": "vestmannaeyjar", "nafn": "Vestmannaeyjar", "model": [] },
+            { "id": "oraefi", "nafn": "Öræfi", "model": [] }
           ]
         }
       ],
@@ -125,13 +163,16 @@
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/austurland-sumar.svg",
           "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+            { "id": "arnarbolshjalli", "nafn": "Arnarbólshjalli", "model": [] },
+            { "id": "hroarstunga", "nafn": "Hróarstunga", "model": [] },
+            { "id": "vestrahorn", "nafn": "Vestrahorn", "model": [] },
+            { "id": "vilhjalmsvollur", "nafn": "Vilhjálmsvöllur", "model": [] }
           ]
         }
       ],
       "vetur": [
         {
-          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/austurland-sumar.svg",
+          "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/austurland-vetur.svg",
           "svaedi": [
             { "id": "berufjordur", "nafn": "Berufjörður", "model": [] },
             { "id": "breiddalur", "nafn": "Breiðdalur", "model": [] },
@@ -149,7 +190,13 @@
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/nordurland-sumar.svg",
           "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
+            { "id": "hraundrangi", "nafn": "Hraundrangi", "model": [] },
+            { "id": "munkathvera", "nafn": "Munkaþverá", "model": [] },
+            {
+              "id": "skinnhufuklettar",
+              "nafn": "Skinnhúfuklettar",
+              "model": []
+            }
           ]
         }
       ],
@@ -176,9 +223,7 @@
       "sumar": [
         {
           "slod": "https://notendur.hi.is/~jgs7/Lokaverkefni/svg/midhalendi-sumar.svg",
-          "svaedi": [
-            { "id": "arnarneshamar", "nafn": "Arnarneshamar", "model": [] }
-          ]
+          "svaedi": [{ "id": "kverkfjoll", "nafn": "Kverkfjöll", "model": [] }]
         }
       ],
       "vetur": [
