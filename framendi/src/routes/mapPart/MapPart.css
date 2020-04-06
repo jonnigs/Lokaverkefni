@@ -1,0 +1,11 @@
+.mappart-container {
+  display: flex;
+}
+
+.svg-container {
+  width: 50%;
+}
+
+.info-container {
+  width: 50%;
+}

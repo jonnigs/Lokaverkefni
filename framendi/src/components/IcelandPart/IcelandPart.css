@@ -1,6 +1,7 @@
 .mapPart {
   display: block;
-  width: 50%;
+  width: 40%;
   height: auto;
+  max-height: 30em;
   margin: 4em auto;
 }

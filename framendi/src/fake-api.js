@@ -1,5 +1,6 @@
 import data from "./climbingAreaData.json";
 
+// Skipti öllum get föllum út fyrir eitt get sem tengist við bakenda þegar þar að kemur.
 function get(endpoint, season) {
   let slod;
   data.results.map(landshluti => {
@@ -10,6 +11,7 @@ function get(endpoint, season) {
         slod = landshluti.vetur[0].slod;
       }
     }
+    return 1;
   });
   return slod;
 }
@@ -20,9 +22,12 @@ function getTemp(endpoint) {
     if (endpoint === landshluti.id) {
       obj = landshluti;
     }
+    return 1;
   });
 
   return obj;
 }
+
+function getTemp2(endpoint) {}
 
 export default { get, getTemp };

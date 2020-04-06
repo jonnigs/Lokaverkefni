@@ -49,17 +49,11 @@ class IcelandPart extends Component {
   };
 
   render() {
-    const { season, svg } = this.state;
+    const { svg } = this.state;
 
     return (
       <div className="icelandpart">
-        <p>{this.props.whichPart}</p>
-        <img
-          className="mapPart"
-          //src={API.get(this.props.whichPart)}
-          alt="Mynd af landshluta"
-          src={svg}
-        />
+        <img className="mapPart" alt="Mynd af landshluta" src={svg} />
       </div>
     );
   }

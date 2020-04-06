@@ -82,23 +82,44 @@ class MapPart extends Component {
     if (mapPartData) {
       if (season === "summer") {
         climbingAreas = mapPartData.sumar[0].svaedi.map(svaedi => {
-          return <p>{svaedi.nafn}</p>;
+          const href = `/climbingarea/${svaedi.id}`;
+          return (
+            <a key={svaedi.id} href={href}>
+              <p>{svaedi.nafn}</p>
+            </a>
+          );
         });
       } else {
         climbingAreas = mapPartData.vetur[0].svaedi.map(svaedi => {
-          return <p>{svaedi.nafn}</p>;
+          const href = `/climbingarea/${svaedi.id}`;
+          return (
+            <a key={svaedi.id} href={href}>
+              <p>{svaedi.nafn}</p>
+            </a>
+          );
         });
       }
     }
 
+    let heading;
+    if (mapPartData) {
+      heading = <h1>{mapPartData.nafn}</h1>;
+    }
+
     return (
       <main className="main">
-        <Switch changeSeason={this.handleSeasonChange} season={season} />
-        <div>
-          <IcelandPart whichPart={id} season={season} />
+        <div className="mappart-container">
+          <div className="svg-container">
+            <Switch changeSeason={this.handleSeasonChange} season={season} />
+            <div>
+              <IcelandPart whichPart={id} season={season} />
+            </div>
+          </div>
+          <div className="info-container">
+            {heading}
+            {climbingAreas}
+          </div>
         </div>
-        <h1>{id}</h1>
-        {climbingAreas}
       </main>
     );
   }
