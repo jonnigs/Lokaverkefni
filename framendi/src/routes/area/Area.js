@@ -16,6 +16,25 @@ class Area extends Component {
     this.setState({ data });
   }
 
+  fullscreen = () => {
+    const elem = document.getElementById("model");
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      /* Chrome, Safari and Opera */
+      console.log("her");
+
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  };
+
   render() {
     const { id, area, data } = this.state;
 
@@ -35,19 +54,25 @@ class Area extends Component {
       );
       um = <p>{data.results[0].um}</p>;
       model = (
-        <iframe
-          title="A 3D model"
-          width="640"
-          height="480"
-          src={data.results[0].model}
-          frameBorder="0"
-          allow="autoplay; fullscreen;"
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"
-        ></iframe>
+        <div>
+          <iframe
+            id="model"
+            title="A 3D model"
+            width="640"
+            height="480"
+            src={data.results[0].model}
+            frameBorder="0"
+            allow="autoplay; fullscreen;"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+          ></iframe>
+          <a onClick={this.fullscreen}>
+            <p>Full Screen</p>
+          </a>
+        </div>
       );
       sectors = data.results[0].sectors.map(sector => {
-        const href = window.location.pathname + "/" + sector.id;
+        const href = window.location.pathname + "?sector=" + sector.id;
         return (
           <a key={sector.id} href={href}>
             <p>{sector.nafn}</p>

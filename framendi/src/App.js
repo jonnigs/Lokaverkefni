@@ -9,6 +9,8 @@ import About from "./routes/about";
 import Map from "./routes/map";
 import MapPart from "./routes/mapPart";
 import Area from "./routes/area";
+//import Sector from "./routes/sector";
+//import Subsector from "./routes/subsector";
 
 import "./App.css";
 
@@ -23,7 +25,8 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/map" exact component={Map} />
             <Route path="/map/:id" component={MapPart} />
-            <Route path="/climbingarea/:id" component={Area} />
+            <Route path="/climbingarea/:id" exact component={Area} />
+            {/* Subsector*/}
           </Switch>
           <Footer />
         </main>
