@@ -1,0 +1,69 @@
+{
+  "results": [
+    {
+      "id": "mulafjall",
+      "nafn": "Múlafjall",
+      "um": "Í Múlafjalli er mikið af klifri. Klifrinu er skipt niður í Hlaðhamra, Kötlugróf, Testofuna, Leikfangaland, Kaffistofuna, Votaberg og Svartastein",
+      "headPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/kotlugrof_pan_1.jpg",
+      "model": "https://notendur.hi.is/~jgs7/Lokaverkefni/SteinnIFjoru/",
+      "sectors": [
+        {
+          "id": "hladhamrar",
+          "nafn": "Hlaðhamarar",
+          "um": "Sector A",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/isalp-hla%C3%B0hamrar.jpg",
+          "model": "",
+          "subsectors": false
+        },
+        {
+          "id": "kotlugrof",
+          "nafn": "Kötlugróf",
+          "um": "Sector B",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2020/03/isalp-k%C3%B6tlugr%C3%B3f.png",
+          "model": "",
+          "subsectors": false
+        },
+        {
+          "id": "testofan",
+          "nafn": "Testofan",
+          "um": "Sector C",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-testofan.jpg",
+          "model": "",
+          "subsectors": false
+        },
+        {
+          "id": "leikfangaland",
+          "nafn": "Leikfangaland",
+          "um": "Sector D",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/Leikfangaland-yfirlit2-1.jpg",
+          "model": "",
+          "subsectors": false
+        },
+        {
+          "id": "kaffistofan",
+          "nafn": "Kaffistofan",
+          "um": "Sector E",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2020/01/Kaffistofan_topos.jpg",
+          "model": "",
+          "subsectors": false
+        },
+        {
+          "id": "votaberg",
+          "nafn": "Votaberg",
+          "um": "Sector E",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/isalp-votaberg.jpg",
+          "model": "",
+          "subsectors": false
+        },
+        {
+          "id": "svartisteinn",
+          "nafn": "Svartisteinn",
+          "um": "Sector F",
+          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "model": "",
+          "subsectors": false
+        }
+      ]
+    }
+  ]
+}

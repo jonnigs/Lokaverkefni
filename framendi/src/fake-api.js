@@ -1,4 +1,5 @@
 import data from "./climbingAreaData.json";
+import mulafjall from "./mulafjall.json";
 
 // Skipti öllum get föllum út fyrir eitt get sem tengist við bakenda þegar þar að kemur.
 function get(endpoint, season) {
@@ -28,6 +29,12 @@ function getTemp(endpoint) {
   return obj;
 }
 
-function getTemp2(endpoint) {}
+function getTemp2(endpoint) {
+  if (endpoint === "/mulafjall") {
+    return mulafjall;
+  } else {
+    return false;
+  }
+}
 
-export default { get, getTemp };
+export default { get, getTemp, getTemp2 };
