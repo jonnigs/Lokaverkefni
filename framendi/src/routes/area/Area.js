@@ -6,15 +6,46 @@ class Area extends Component {
     super(props);
     this.state = {
       id: this.props.match.params.id,
+      query: "",
       area: ""
     };
+
+    this.getQueryValue = this.getQueryValue.bind(this);
+    this.setQueryValue = this.setQueryValue.bind(this);
   }
 
   async componentDidMount() {
     const endpoint = `/${this.state.id}`;
     const data = API.getTemp2(endpoint);
     this.setState({ data });
+    const query = this.props.location.search;
+
+    this.setQueryValue(query);
   }
+
+  async componentDidUpdate() {
+    this.updateURLParameter();
+  }
+
+  getQueryValue = () => {
+    const query = this.props.location.search;
+    return query;
+  };
+
+  setQueryValue = query => {
+    this.setState({ query });
+    this.updateURLParameter();
+  };
+
+  updateURLParameter = () => {
+    const URLBase = this.props.location.pathname;
+    const URL = URLBase + this.state.query;
+    window.history.pushState("page2", "Title", URL);
+  };
+
+  leidir = () => {
+    console.log(this.state.data.results[0].leidir);
+  };
 
   fullscreen = () => {
     const elem = document.getElementById("model");
@@ -66,17 +97,15 @@ class Area extends Component {
             mozallowfullscreen="true"
             webkitallowfullscreen="true"
           ></iframe>
-          <a onClick={this.fullscreen}>
-            <p>Full Screen</p>
-          </a>
+          <p onClick={this.fullscreen}>Full Screen</p>
         </div>
       );
       sectors = data.results[0].sectors.map(sector => {
-        const href = window.location.pathname + "?sector=" + sector.id;
+        const query = "?sector=" + sector.id;
         return (
-          <a key={sector.id} href={href}>
-            <p>{sector.nafn}</p>
-          </a>
+          <p key={sector.id} onClick={() => this.setQueryValue(query)}>
+            {sector.nafn}
+          </p>
         );
       });
     }
@@ -87,8 +116,9 @@ class Area extends Component {
         <p>Area</p>
         {heading}
         {um}
+        <p onClick={this.leidir}>Skoða allar leiðir</p>
         {sectors}
-        {model}
+        {/*model*/}
       </main>
     );
   }

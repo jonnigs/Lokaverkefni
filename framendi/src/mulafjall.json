@@ -12,7 +12,7 @@
           "nafn": "Hlaðhamarar",
           "um": "Sector A",
           "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/isalp-hla%C3%B0hamrar.jpg",
-          "model": "",
+          "model": "https://notendur.hi.is/~jgs7/Lokaverkefni/mulafjall/a-hladhamrar/",
           "subsectors": false
         },
         {
@@ -20,7 +20,7 @@
           "nafn": "Kötlugróf",
           "um": "Sector B",
           "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2020/03/isalp-k%C3%B6tlugr%C3%B3f.png",
-          "model": "",
+          "model": "https://notendur.hi.is/~jgs7/Lokaverkefni/mulafjall/b-kotlugrof/",
           "subsectors": false
         },
         {
@@ -28,7 +28,7 @@
           "nafn": "Testofan",
           "um": "Sector C",
           "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-testofan.jpg",
-          "model": "",
+          "model": "https://notendur.hi.is/~jgs7/Lokaverkefni/mulafjall/c-testofan/",
           "subsectors": false
         },
         {
@@ -36,7 +36,7 @@
           "nafn": "Leikfangaland",
           "um": "Sector D",
           "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/Leikfangaland-yfirlit2-1.jpg",
-          "model": "",
+          "model": "https://notendur.hi.is/~jgs7/Lokaverkefni/mulafjall/d-leikfangaland/",
           "subsectors": false
         },
         {
@@ -44,15 +44,7 @@
           "nafn": "Kaffistofan",
           "um": "Sector E",
           "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2020/01/Kaffistofan_topos.jpg",
-          "model": "",
-          "subsectors": false
-        },
-        {
-          "id": "votaberg",
-          "nafn": "Votaberg",
-          "um": "Sector E",
-          "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2015/07/isalp-votaberg.jpg",
-          "model": "",
+          "model": "https://notendur.hi.is/~jgs7/Lokaverkefni/mulafjall/e-kaffistofan/",
           "subsectors": false
         },
         {
@@ -62,6 +54,108 @@
           "sectorPhoto": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
           "model": "",
           "subsectors": false
+        }
+      ],
+      "leidir": [
+        {
+          "routeId": "1",
+          "nafn": "Músarrindill",
+          "grada": "WI 3",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Hladhamrar",
+          "subsector": false
+        },
+        {
+          "routeId": "2",
+          "nafn": "I Love Backup",
+          "grada": "WI 3",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Hladhamrar",
+          "subsector": false
+        },
+        {
+          "routeId": "3",
+          "nafn": "WW3",
+          "grada": "WI 3",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Hladhamrar",
+          "subsector": false
+        },
+        {
+          "routeId": "4",
+          "nafn": "Katla",
+          "grada": "WI 3",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Kötlugróf",
+          "subsector": false
+        },
+        {
+          "routeId": "5",
+          "nafn": "Hekla",
+          "grada": "WI 3",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Kötlugróf",
+          "subsector": false
+        },
+        {
+          "routeId": "6",
+          "nafn": "Askja",
+          "grada": "WI 3",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Kötlugróf",
+          "subsector": false
+        },
+        {
+          "routeId": "7",
+          "nafn": "Íste",
+          "grada": "WI 5",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Testofan",
+          "subsector": false
+        },
+        {
+          "routeId": "8",
+          "nafn": "Pabbaleiðin",
+          "grada": "M 6",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Testofan",
+          "subsector": false
+        },
+        {
+          "routeId": "9",
+          "nafn": "Mömmuleiðin",
+          "grada": "WI 4",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Testofan",
+          "subsector": false
+        },
+        {
+          "routeId": "10",
+          "nafn": "Keisarinn",
+          "grada": "WI 4",
+          "photo": "http://www.isalp.is/wp-content/uploads/2017/12/isalp-svartisteinn.jpg",
+          "um": "Lorem ipsum si amet",
+          "area": "Múlafjall",
+          "sector": "Testofan",
+          "subsector": false
         }
       ]
     }
