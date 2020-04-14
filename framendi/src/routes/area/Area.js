@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Sector from "../../components/Sector";
 import API from "../../fake-api.js";
 
 class Area extends Component {
@@ -67,13 +68,18 @@ class Area extends Component {
   };
 
   render() {
-    const { id, area, data } = this.state;
+    const { id, area, data, query } = this.state;
 
     let heading;
     let headPhoto;
     let um;
     let model;
     let sectors;
+    let sector;
+
+    if (query) {
+      sector = <Sector data={data} query={query} />;
+    }
 
     if (data) {
       heading = <h1>{data.results[0].nafn}</h1>;
@@ -119,6 +125,7 @@ class Area extends Component {
         <p onClick={this.leidir}>Skoða allar leiðir</p>
         {sectors}
         {/*model*/}
+        {sector}
       </main>
     );
   }
