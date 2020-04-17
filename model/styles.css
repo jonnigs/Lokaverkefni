@@ -1,6 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
+  font-family: "Baloo Tamma 2", cursive;
 }
 
 canvas {
@@ -24,16 +25,69 @@ canvas {
   position: absolute;
 }
 
-.fullscreen {
+.fullscreen,
+.exitfullscreen {
   width: 8vh;
   padding: 1em;
   position: absolute;
   right: 0;
   bottom: 0;
-  transition: width 0.5s ease-in;
+  transition: width 0.3s ease-in;
   z-index: 100;
 }
 
-.fullscreen:hover {
+.fullscreen:hover,
+.exitfullscreen:hover,
+.settings:hover,
+.information:hover {
   width: 9vh;
+}
+
+#hidden {
+  display: none;
+}
+
+.settings,
+.information {
+  width: 8vh;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  transition: width 0.3s ease-in;
+}
+.settings {
+  right: 0;
+}
+
+.information {
+  left: 0;
+}
+
+.settings-menu,
+.information-menu {
+  width: 50vh;
+  height: 20vh;
+  margin: 1em;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  background-color: darkgrey;
+  border-radius: 10px;
+  opacity: 0.3;
+}
+
+.settings-menu {
+  right: 0;
+}
+
+.information-menu {
+  left: 0;
+}
+
+.settings-form div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
 }

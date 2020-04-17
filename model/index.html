@@ -4,15 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
+      rel="stylesheet"
+    />
     <title>Módel</title>
   </head>
   <body>
     <div id="model">
       <img
+        id="visible"
         class="fullscreen"
         src="./svg/fullscreen.svg"
         alt="fullscreen icon"
       />
+      <img
+        id="hidden"
+        class="exitfullscreen"
+        src="./svg/exitfullscreen.svg"
+        alt="exit fullscreen icon"
+      />
+      <img
+        id="visible"
+        class="settings"
+        src="./svg/settings.svg"
+        alt="settings icon"
+      />
+      <img
+        id="visible"
+        class="information"
+        src="./svg/info.svg"
+        alt="information icon"
+      />
+
+      <div id="hidden" class="settings-menu">
+        <form class="settings-form" action="post">
+          <div>
+            <input type="checkbox" id="phoneControls" name="phoneControls" />
+            <label for="phoneControls">Símastjórn</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="labelVisability"
+              name="labelVisability"
+              checked
+            />
+            <label for="labelVisability">Sýna merkingar</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="phoneControls"
+              name="phoneControls"
+              checked
+            />
+            <label for="routeVisiability">Sýna leiðir</label>
+          </div>
+        </form>
+      </div>
+
+      <div id="hidden" class="information-menu"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
     <script src="https://notendur.hi.is/~jgs7/Lokaverkefni/ThreeJSFiles/MTLLoader.js"></script>
