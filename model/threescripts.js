@@ -9,7 +9,7 @@ var camera = new THREE.PerspectiveCamera(
 var renderer = new THREE.WebGLRenderer();
 renderer.setClearColor("#e5e5e5");
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+document.getElementById("model").appendChild(renderer.domElement);
 
 camera.position.x = -5.293679018687284;
 camera.position.y = 7.718624108803545;
@@ -36,7 +36,7 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 
-var animate = function() {
+var animate = function () {
   requestAnimationFrame(animate);
 
   renderer.render(scene, camera);

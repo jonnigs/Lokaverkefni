@@ -1,26 +1,24 @@
-const fullscreen = document.getElementsByClassName("fullscreen");
+document.addEventListener("DOMContentLoaded", function (event) {
+  //const canvas = document.getElementsByTagName("canvas");
+  //canvas.item(0).setAttribute("id", "model");
 
-const model = document.getElementsByTagName("CANVAS")[0];
+  document
+    .getElementsByClassName("fullscreen")
+    .item(0)
+    .addEventListener("click", (e) => {
+      const elem = document.getElementById("model");
 
-model.classList.add("model");
-
-document.addEventListener("click", e => {
-  const elem = document.getElementsByClassName("model");
-
-  console.log(e);
-
-  //if (elem.requestFullscreen) {
-  //elem.requestFullscreen();
-  //} else if (elem.mozRequestFullScreen) {
-  /* Firefox */
-  //elem.mozRequestFullScreen();
-  //} else if (elem.webkitRequestFullscreen) {
-  /* Chrome, Safari and Opera */
-  //console.log("her");
-
-  //elem.webkitRequestFullscreen();
-  //} else if (elem.msRequestFullscreen) {
-  /* IE/Edge */
-  //elem.msRequestFullscreen();
-  //}
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        /* Chrome, Safari and Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    });
 });
