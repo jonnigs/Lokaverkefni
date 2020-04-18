@@ -19,6 +19,7 @@ h1 {
   line-height: 0.8em;
   border: 5px solid black;
   padding: 0.2em;
+  z-index: 100;
 }
 
 canvas {
@@ -26,16 +27,29 @@ canvas {
 }
 
 .fullscreen,
-.exitfullscreen {
+.exitfullscreen,
+.settings,
+.information {
   width: 8vh;
   padding: 1em;
   position: absolute;
-  right: 0;
-  bottom: 0;
   transition: width 0.3s ease-in;
   z-index: 100;
 }
 
+.fullscreen,
+.exitfullscreen {
+  right: 0;
+  bottom: 0;
+}
+
+.settings {
+  right: 0;
+}
+
+.information {
+  left: 0;
+}
 .fullscreen:hover,
 .exitfullscreen:hover,
 .settings:hover,
@@ -45,23 +59,6 @@ canvas {
 
 #hidden {
   display: none;
-}
-
-.settings,
-.information {
-  width: 8vh;
-  padding: 1em;
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  transition: width 0.3s ease-in;
-}
-.settings {
-  right: 0;
-}
-
-.information {
-  left: 0;
 }
 
 .settings-menu,

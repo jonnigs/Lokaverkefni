@@ -48,9 +48,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document;
   settings.item(0).addEventListener("click", (e) => {
     if (setingsVisability) {
-      settingsMenu.item(0).setAttribute("id", "hidden");
+      //settingsMenu.item(0).setAttribute("id", "hidden");
+      settingsMenu.item(0).classList.remove("fadeIn");
+      settingsMenu.item(0).classList.add("fadeOut");
     } else {
       settingsMenu.item(0).setAttribute("id", "visible");
+      settingsMenu.item(0).classList.remove("fadeOut");
+      settingsMenu.item(0).classList.add("fadeIn");
     }
     setingsVisability = !setingsVisability;
   });
@@ -58,9 +62,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document;
   information.item(0).addEventListener("click", (e) => {
     if (informationVisability) {
-      informationMenu.item(0).setAttribute("id", "hidden");
+      informationMenu.item(0).classList.remove("fadeIn");
+      informationMenu.item(0).classList.add("fadeOut");
     } else {
       informationMenu.item(0).setAttribute("id", "visible");
+      informationMenu.item(0).classList.remove("fadeOut");
+      informationMenu.item(0).classList.add("fadeIn");
     }
     informationVisability = !informationVisability;
   });
