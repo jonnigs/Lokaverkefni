@@ -5,6 +5,21 @@ var numbersVisable = true;
 var OBJroutes;
 var routesVisable = true;
 var OBJmodel;
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    if (decodeURIComponent(pair[0]) == variable) {
+      return decodeURIComponent(pair[1]);
+    }
+  }
+  console.log("Query variable %s not found", variable);
+}
+
+console.log(getQueryVariable("model"));
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(
   75,
@@ -31,7 +46,7 @@ controls.campingFactor = 0.25;
 controls.enableZoom = true;
 
 // Hlaða númerum
-var mtlLoader = new THREE.MTLLoader();
+/*var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath(BaseURL);
 mtlLoader.setPath(BaseURL);
 mtlLoader.load("baraNumer/untitled.mtl", function (materials) {
@@ -73,23 +88,29 @@ mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
     OBJmodel = object;
     scene.add(object);
   });
-});
+});*/
 
-/*var geometry = new THREE.BoxGeometry(1, 1, 1);
+var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({ color: 0xddd });
-var mesh = new THREE.Mesh(geometry, material);
-var meshVisable = true;
+var OBJnumbers = new THREE.Mesh(geometry, material);
 
 var geometry2 = new THREE.BoxGeometry(1, 1, 1);
 var material2 = new THREE.MeshLambertMaterial({ color: 0xf7f7f7 });
-var mesh2 = new THREE.Mesh(geometry2, material2);
-var mesh2Visable = true;
-mesh2.position.x = -1;
-mesh2.position.y = -1;
-mesh2.position.z = -1;
+var OBJroutes = new THREE.Mesh(geometry2, material2);
+OBJnumbers.position.x = -1;
+OBJnumbers.position.y = -1;
+OBJnumbers.position.z = -1;
 
-scene.add(mesh);
-scene.add(mesh2);*/
+var geometry3 = new THREE.BoxGeometry(1, 1, 1);
+var material3 = new THREE.MeshLambertMaterial({ color: 515151 });
+var OBJmodel = new THREE.Mesh(geometry3, material3);
+OBJmodel.position.x = 1;
+OBJmodel.position.y = 1;
+OBJmodel.position.z = 1;
+
+scene.add(OBJnumbers);
+scene.add(OBJroutes);
+scene.add(OBJmodel);
 
 window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
