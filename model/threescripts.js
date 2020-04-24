@@ -38,11 +38,6 @@ renderer.setClearColor("#e5e5e5");
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("model").appendChild(renderer.domElement);
 
-/*camera.position.x = -5.293679018687284;
-camera.position.y = 7.718624108803545;
-camera.position.z = 8.608903997312051;
-*/
-
 camera.position.x = 2.4598917529848676;
 camera.position.y = -0.06428893824059892;
 camera.position.z = -0.11382671050097559;
@@ -69,7 +64,7 @@ mtlLoader0.load("baraModel/untitled.mtl", function (materials) {
     scene.add(object);
   });
 });
-/*
+
 // Hlaða númerum
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath(URL);
@@ -81,7 +76,7 @@ mtlLoader.load("baraNumer/untitled.mtl", function (materials) {
   objLoader.setPath(URL);
   objLoader.load("baraNumer/untitled.obj", function (object) {
     OBJnumbers = object;
-    scene.add(object);
+    //scene.add(object);
   });
 });
 
@@ -96,7 +91,7 @@ mtlLoader2.load("baraLeidir/untitled.mtl", function (materials) {
   objLoader2.setPath(URL);
   objLoader2.load("baraLeidir/untitled.obj", function (object) {
     OBJroutes = object;
-    scene.add(object);
+    //scene.add(object);
   });
 });
 
@@ -111,10 +106,22 @@ mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
   objLoader3.setPath(URL);
   objLoader3.load("baraModel/untitled.obj", function (object) {
     OBJmodel = object;
+
+    console.log("Hér");
+
+    loadingVisable = false;
+    scene.remove(OBJloading);
+    camera.position.x = -5.293679018687284;
+    camera.position.y = 7.718624108803545;
+    camera.position.z = 8.608903997312051;
+
+    scene.add(OBJnumbers);
+    scene.add(OBJroutes);
     scene.add(object);
+    //scene.add(OBJmodel);
   });
 });
-*/
+
 /*
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({ color: 0xddd });
@@ -169,7 +176,10 @@ routes.addEventListener("click", (e) => {
 
 var animate = function () {
   requestAnimationFrame(animate);
-  OBJloading.rotation.x -= 0.03;
+
+  if (loadingVisable) {
+    OBJloading.rotation.x -= 0.03;
+  }
 
   renderer.render(scene, camera);
 };
