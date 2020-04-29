@@ -10,7 +10,6 @@ var OBJnumbers;
 var numbersVisable = true;
 var OBJroutes;
 var routesVisable = true;
-var OBJmodel;
 
 // Fall sem nær í gildi úr querystring eftir breytu
 function getQueryVariable(variable) {
@@ -44,11 +43,6 @@ camera.position.z = -0.11382671050097559;
 
 var ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
 scene.add(ambientLight);
-
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.campingFactor = 0.25;
-controls.enableZoom = true;
 
 // Hlaða loading skjá
 var mtlLoader0 = new THREE.MTLLoader();
@@ -95,7 +89,7 @@ mtlLoader2.load("baraLeidir/untitled.mtl", function (materials) {
   });
 });
 
-// Hlaða módeli
+// Hlaða módeli og enable-a Orbit controls
 var mtlLoader3 = new THREE.MTLLoader();
 mtlLoader3.setTexturePath(URL);
 mtlLoader3.setPath(URL);
@@ -107,8 +101,6 @@ mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
   objLoader3.load("baraModel/untitled.obj", function (object) {
     OBJmodel = object;
 
-    console.log("Hér");
-
     loadingVisable = false;
     scene.remove(OBJloading);
     camera.position.x = -5.293679018687284;
@@ -118,7 +110,12 @@ mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
     scene.add(OBJnumbers);
     scene.add(OBJroutes);
     scene.add(object);
-    //scene.add(OBJmodel);
+
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.25;
+    controls.enablePan = true;
+    controls.enableZoom = true;
   });
 });
 
@@ -146,6 +143,7 @@ scene.add(OBJroutes);
 scene.add(OBJmodel);
 */
 
+// Event listener sem lætur canvas fylla út í window
 window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -153,6 +151,7 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 
+// Event listener-ar sem sýna/fela leiðir og merkingar
 const numbers = document.getElementById("labelVisability");
 const routes = document.getElementById("routeVisability");
 
@@ -182,6 +181,7 @@ var animate = function () {
   }
 
   renderer.render(scene, camera);
+  //camera.update();
 };
 
 animate();
