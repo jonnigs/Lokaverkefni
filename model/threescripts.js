@@ -44,6 +44,12 @@ camera.position.z = -0.11382671050097559;
 var ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
 scene.add(ambientLight);
 
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.25;
+controls.enablePan = true;
+controls.enableZoom = true;
+
 // Hlaða loading skjá
 var mtlLoader0 = new THREE.MTLLoader();
 mtlLoader0.setTexturePath(BaseURL + "loading/");
@@ -110,12 +116,6 @@ mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
     scene.add(OBJnumbers);
     scene.add(OBJroutes);
     scene.add(object);
-
-    var controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.25;
-    controls.enablePan = true;
-    controls.enableZoom = true;
   });
 });
 
