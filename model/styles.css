@@ -4,10 +4,6 @@ body {
   font-family: "Baloo Tamma 2", cursive;
 }
 
-canvas {
-  display: block;
-}
-
 h1 {
   position: absolute;
   top: 2em;
@@ -23,9 +19,15 @@ h1 {
 }
 
 canvas {
+  display: block;
   position: absolute;
 }
 
+#hidden {
+  display: none;
+}
+
+/* Stýringar á staðsetningum á svg merkjum og hover stækkun */
 .fullscreen,
 .exitfullscreen,
 .settings,
@@ -57,14 +59,10 @@ canvas {
   width: 9vh;
 }
 
-#hidden {
-  display: none;
-}
-
+/* Útlit og staðsetning á info og settings gluggum */
 .settings-menu,
 .information-menu {
-  width: 50vh;
-  height: 20vh;
+  width: 30%;
   margin: 1em;
   position: absolute;
   top: 0;
@@ -80,8 +78,87 @@ canvas {
 
 .information-menu {
   left: 0;
+  padding: 1em;
 }
 
+/* Útlit á tökkum og upplýsingum í info glugga */
+
+.information-menu > div {
+  border-radius: 5px;
+  background-color: #ddd;
+  transition: background-color 0.5s ease-in;
+  float: right;
+  margin-top: 1em;
+}
+
+.info_controls {
+  margin-top: 0 !important;
+}
+
+.info_controls,
+.info_markings {
+  height: 2em;
+  width: 70%;
+  float: right;
+}
+
+.info_controls:hover,
+.info_markings:hover {
+  background-color: rgb(128, 128, 128);
+}
+
+.info_controls p,
+.info_markings p {
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.markings,
+.controls {
+  width: 100%;
+}
+
+.markings div {
+  display: flex;
+  align-items: center;
+}
+
+.markings div span {
+  height: 7px;
+  border-radius: 5px;
+  margin: 0 1em 0 1em;
+  width: 3em;
+}
+
+.boulder {
+  background-color: #ffb61e;
+}
+
+.sport {
+  background-color: #e74a3d;
+}
+
+.trad {
+  background-color: #fff;
+}
+
+.ice {
+  background-color: #000080;
+}
+
+.mixed {
+  background-color: #1e5631;
+}
+
+.alpine {
+  background-color: #f05e23;
+}
+
+.decent {
+  background-color: #cc8899;
+}
+
+/* Útlit á innihaldi settings glugga */
 .settings-form div {
   display: flex;
   justify-content: end;

@@ -7,11 +7,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const settingsMenu = document.getElementsByClassName("settings-menu");
   const information = document.getElementsByClassName("information");
   const informationMenu = document.getElementsByClassName("information-menu");
+
+  const controlInfo = document.getElementsByClassName("info_controls");
+  const controls = document.getElementsByClassName("controls");
+
+  const markingInfo = document.getElementsByClassName("info_markings");
+  const markings = document.getElementsByClassName("markings");
+
   const elem = document.getElementById("model");
 
   let setingsVisability = false;
   let informationVisability = false;
 
+  // Fullscreen
   document;
   fullscreen.item(0).addEventListener("click", (e) => {
     fullscreen.item(0).setAttribute("id", "hidden");
@@ -30,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  // Fara út fullscreen
   document;
   exitfullscreen.item(0).addEventListener("click", (e) => {
     fullscreen.item(0).setAttribute("id", "visible");
@@ -45,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  // Birta settings glugga
   document;
   settings.item(0).addEventListener("click", (e) => {
     if (setingsVisability) {
@@ -59,16 +69,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
     setingsVisability = !setingsVisability;
   });
 
+  // Birta info glugga
   document;
   information.item(0).addEventListener("click", (e) => {
     if (informationVisability) {
       informationMenu.item(0).classList.remove("fadeIn");
       informationMenu.item(0).classList.add("fadeOut");
+      controlInfo.item(0).setAttribute("id", "visable");
+      markingInfo.item(0).setAttribute("id", "visable");
+      controls.item(0).setAttribute("id", "hidden");
+      markings.item(0).setAttribute("id", "hidden");
     } else {
       informationMenu.item(0).setAttribute("id", "visible");
       informationMenu.item(0).classList.remove("fadeOut");
       informationMenu.item(0).classList.add("fadeIn");
     }
     informationVisability = !informationVisability;
+  });
+
+  // Birta stýrileiðbeiningar
+  document;
+  controlInfo.item(0).addEventListener("click", (e) => {
+    //controlInfo.item(0).setAttribute("id", "hidden");
+    //markingInfo.item(0).setAttribute("id", "hidden");
+    controls.item(0).setAttribute("id", "visible");
+    markings.item(0).setAttribute("id", "hidden");
+  });
+
+  // Birta útskýringar á merkingum
+  document;
+  markingInfo.item(0).addEventListener("click", (e) => {
+    //controlInfo.item(0).setAttribute("id", "hidden");
+    //markingInfo.item(0).setAttribute("id", "hidden");
+    markings.item(0).setAttribute("id", "visible");
+    controls.item(0).setAttribute("id", "hidden");
   });
 });
