@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+      integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk="
+      crossorigin="anonymous"
+    />
+    <title>Módel</title>
+  </head>
+  <body>
+    <div id="model">
+      <img
+        id="visible"
+        class="fullscreen"
+        src="./svg/fullscreen.svg"
+        alt="fullscreen icon"
+      />
+      <img
+        id="hidden"
+        class="exitfullscreen"
+        src="./svg/exitfullscreen.svg"
+        alt="exit fullscreen icon"
+      />
+      <img
+        id="visible"
+        class="settings animated"
+        src="./svg/settings.svg"
+        alt="settings icon"
+      />
+      <img
+        id="visible"
+        class="information"
+        src="./svg/info.svg"
+        alt="information icon"
+      />
+      <div id="hidden" class="settings-menu animated">
+        <form class="settings-form" action="post">
+          <div>
+            <input
+              type="checkbox"
+              id="labelVisability"
+              name="labelVisability"
+              checked
+            />
+            <label for="labelVisability">Sýna merkingar</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="routeVisability"
+              name="routeVisability"
+              checked
+            />
+            <label for="routeVisiability">Sýna leiðir</label>
+          </div>
+        </form>
+      </div>
+
+      <div id="hidden" class="information-menu animated">
+        <div class="info_controls">
+          <p>
+            Hvernig á að stjórna módelinu
+          </p>
+        </div>
+        <div class="info_markings">
+          <p>
+            Útskýring á merkingum
+          </p>
+        </div>
+        <div id="hidden" class="controls">
+          <div>
+            <p>Vinstri músarhnappur eða einn fingur snýr módeli</p>
+            <div class="image_div">
+              <img
+                id="visible"
+                class="leftmouse"
+                src="./svg/leftmouse.svg"
+                alt="left mouse icon"
+              />
+              <img
+                id="visible"
+                class="slash"
+                src="./svg/slash.svg"
+                alt="slash icon"
+              />
+              <img
+                id="visible"
+                class="onefinger"
+                src="./svg/onefinger.svg"
+                alt="one finger icon"
+              />
+              <img
+                id="visible"
+                class="leads"
+                src="./svg/arrowright.svg"
+                alt="leads icon"
+              />
+              <img
+                id="visible"
+                class="rotate"
+                src="./svg/rotate.svg"
+                alt="rotate icon"
+              />
+            </div>
+          </div>
+          <div>
+            <p>Hægri músarhnappur eða tveir fingur hliðra módeli</p>
+            <div class="image_div">
+              <img
+                id="visible"
+                class="rightmouse"
+                src="./svg/rightmouse.svg"
+                alt="right mouse icon"
+              />
+              <img
+                id="visible"
+                class="slash"
+                src="./svg/slash.svg"
+                alt="slash icon"
+              />
+              <img
+                id="visible"
+                class="twofinger"
+                src="./svg/twofinger.svg"
+                alt="two finger icon"
+              />
+              <img
+                id="visible"
+                class="leads"
+                src="./svg/arrowright.svg"
+                alt="leads icon"
+              />
+              <img
+                id="visible"
+                class="pan"
+                src="./svg/pan.svg"
+                alt="pan icon"
+              />
+            </div>
+          </div>
+          <div>
+            <p>
+              Músarhjól eða teygja/klípa hreyfing með fingrum færir módelið nær
+              eða fjær
+            </p>
+            <div class="image_div">
+              <img
+                id="visible"
+                class="middlemouse"
+                src="./svg/middlemouse.svg"
+                alt="middle mouse icon"
+              />
+              <img
+                id="visible"
+                class="slash"
+                src="./svg/slash.svg"
+                alt="slash icon"
+              />
+              <img
+                id="visible"
+                class="pinch"
+                src="./svg/pinch.svg"
+                alt="pinch icon"
+              />
+              <img
+                id="visible"
+                class="leads"
+                src="./svg/arrowright.svg"
+                alt="leads icon"
+              />
+              <img
+                id="visible"
+                class="zoom"
+                src="./svg/zoom.svg"
+                alt="zoom icon"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="hidden" class="markings">
+          <div>
+            <span class="boulder"></span>
+            <p>Boulder</p>
+          </div>
+          <div>
+            <span class="sport"></span>
+            <p>Sportklifur</p>
+          </div>
+          <div>
+            <span class="trad"></span>
+            <p>Dótaklifur</p>
+          </div>
+          <div>
+            <span class="ice"></span>
+            <p>Ísklifur</p>
+          </div>
+          <div>
+            <span class="mixed"></span>
+            <p>Mixklifur</p>
+          </div>
+          <div>
+            <span class="alpine"></span>
+            <p>Alpaklifur</p>
+          </div>
+          <div>
+            <span class="decent"></span>
+            <p>Aðkoma/Niðurganga</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../ThreeJSFiles/three.js"></script>
+    <script src="../ThreeJSFiles/OrbitControls.js"></script>
+    <script src="../ThreeJSFiles/OBJLoader.js"></script>
+    <script src="../ThreeJSFiles/MTLLoader.js"></script>
+    <script src="threescripts.js"></script>
+    <script src="threex.domevents.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -62,7 +62,7 @@ canvas {
 /* Útlit og staðsetning á info og settings gluggum */
 .settings-menu,
 .information-menu {
-  width: 30%;
+  width: 25%;
   margin: 1em;
   position: absolute;
   top: 0;
@@ -116,6 +116,35 @@ canvas {
 .markings,
 .controls {
   width: 100%;
+}
+
+.controls p {
+  padding: 0 1em;
+}
+
+.image_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.image_div > img {
+  width: 3em;
+}
+
+.leftmouse,
+.rightmouse,
+.middlemouse {
+  height: 3em;
+}
+
+.slash {
+  height: 4em;
+}
+
+.leads {
+  margin: 0 1.5em;
 }
 
 .markings div {

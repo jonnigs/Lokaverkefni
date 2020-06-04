@@ -45,14 +45,16 @@ var ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
 scene.add(ambientLight);
 
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.25;
-controls.enablePan = true;
-controls.enableZoom = true;
+controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+controls.dampingFactor = 0.05;
+
+controls.screenSpacePanning = false;
+
+controls.maxPolarAngle = Math.PI / 2;
 
 // Hlaða loading skjá
 var mtlLoader0 = new THREE.MTLLoader();
-mtlLoader0.setTexturePath(BaseURL + "loading/");
+//mtlLoader0.setTexturePath(BaseURL + "loading/");
 mtlLoader0.setPath(BaseURL + "loading/");
 mtlLoader0.load("baraModel/untitled.mtl", function (materials) {
   materials.preload();
@@ -67,7 +69,7 @@ mtlLoader0.load("baraModel/untitled.mtl", function (materials) {
 
 // Hlaða númerum
 var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setTexturePath(URL);
+//mtlLoader.setTexturePath(URL);
 mtlLoader.setPath(URL);
 mtlLoader.load("baraNumer/untitled.mtl", function (materials) {
   materials.preload();
@@ -82,7 +84,7 @@ mtlLoader.load("baraNumer/untitled.mtl", function (materials) {
 
 // Hlaða leiðum
 var mtlLoader2 = new THREE.MTLLoader();
-mtlLoader2.setTexturePath(URL);
+//mtlLoader2.setTexturePath(URL);
 mtlLoader2.setPath(URL);
 mtlLoader2.load("baraLeidir/untitled.mtl", function (materials) {
   materials.preload();
@@ -97,7 +99,7 @@ mtlLoader2.load("baraLeidir/untitled.mtl", function (materials) {
 
 // Hlaða módeli og enable-a Orbit controls
 var mtlLoader3 = new THREE.MTLLoader();
-mtlLoader3.setTexturePath(URL);
+//mtlLoader3.setTexturePath(URL);
 mtlLoader3.setPath(URL);
 mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
   materials.preload();
@@ -112,6 +114,7 @@ mtlLoader3.load("baraModel/untitled.mtl", function (materials) {
     camera.position.x = -5.293679018687284;
     camera.position.y = 7.718624108803545;
     camera.position.z = 8.608903997312051;
+    controls.update();
 
     scene.add(OBJnumbers);
     scene.add(OBJroutes);
@@ -175,13 +178,13 @@ routes.addEventListener("click", (e) => {
 
 var animate = function () {
   requestAnimationFrame(animate);
+  controls.update();
 
   if (loadingVisable) {
     OBJloading.rotation.x -= 0.03;
   }
 
   renderer.render(scene, camera);
-  //camera.update();
 };
 
 animate();
